@@ -21,8 +21,11 @@ spec:
       containers:
         - name: second-node
           image: mriabov/kubernetes-first-app
+          imagePullPolicy: Always
           livenessProbe:
             httpGet:
               port: 8080
               path: /
+            periodSeconds: 10
+            initialDelaySeconds: 20
 
