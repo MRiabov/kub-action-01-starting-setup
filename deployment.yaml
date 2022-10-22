@@ -21,3 +21,8 @@ spec:
       containers:
         - name: second-node
           image: mriabov/kubernetes-first-app
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /
+
